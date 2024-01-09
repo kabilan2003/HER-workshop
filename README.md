@@ -1,10 +1,10 @@
-"# HER-workshop" 
+# HER-workshop
 
-# Advancing AI and Robotics Workshop with Jetson Devices and Metropolis SDK
+## Advancing AI and Robotics Workshop with Jetson Devices and Metropolis SDK
 
 Welcome to the "Advancing AI and Robotics with Jetson Devices and Metropolis SDK" workshop! This comprehensive session is designed for university graduates interested in exploring the intersection of artificial intelligence, deep learning, and robotics using NVIDIA Jetson devices and the powerful Metropolis SDK.
 
-## Workshop Overview
+### Workshop Overview
 
 This workshop aims to provide participants with practical skills and knowledge in the following areas:
 
@@ -18,7 +18,7 @@ This workshop aims to provide participants with practical skills and knowledge i
 - Customizing and extending Metropolis SDK for robotics applications
 - Building an end-to-end AI and robotics application using Jetson devices, Metropolis SDK, and ROS
 
-## Prerequisites
+### Prerequisites
 
 Make sure you have the following:
 
@@ -26,7 +26,7 @@ Make sure you have the following:
 - Laptop or computer with internet access
 - Basic knowledge of AI and programming concepts
 
-## Workshop Agenda
+### Workshop Agenda
 
 The workshop is structured as a one-day event, covering a variety of topics through a combination of lectures, hands-on exercises, and a final project. Here's an overview of the agenda:
 
@@ -88,16 +88,15 @@ The workshop is structured as a one-day event, covering a variety of topics thro
 
 
 
-## Getting Started
+### Getting Started
 
-To get started with the workshop, follow the instructions outlined in the individual sections of this repository. Each section contains detailed information, code snippets, and resources to facilitate your learning journey.
+Simply click on the following link to join the community: [Slack Invite Link] 
+To get started with the workshop, follow the instructions outlined in the individual sections of this repository. Each section contains detailed information, code snippets, and resources to facilitate your learning.
 
-## Questions and Support
+### Questions and Support
 
 If you have any questions or encounter issues during the workshop, feel free to reach out by creating an issue in this repository. We're here to help!
 
-## Acknowledgments
-
-Special thanks to NVIDIA for providing the Jetson devices and Metropolis SDK for this workshop.
+### Acknowledgments
 
 Happy learning!
