@@ -1,103 +1,88 @@
-"# HER-workshop" 
+# installROS
+Install Robot Operating System (ROS) Melodic on NVIDIA Jetson Developer Kits
 
-# Advancing AI and Robotics Workshop with Jetson Devices and Metropolis SDK
+These scripts will install Robot Operating System (ROS) Melodic on the NVIDIA Jetson Developer Kits. 
 
-Welcome to the "Advancing AI and Robotics with Jetson Devices and Metropolis SDK" workshop! This comprehensive session is designed for university graduates interested in exploring the intersection of artificial intelligence, deep learning, and robotics using NVIDIA Jetson devices and the powerful Metropolis SDK.
+Jetson Nano, Jetson AGX Xavier, Jetson Xavier NX, Jetson TX2, Jetson TX1
 
-## Workshop Overview
+The script is based on the Ubuntu ARM install of ROS Melodic: http://wiki.ros.org/melodic/Installation/Ubuntu
 
-This workshop aims to provide participants with practical skills and knowledge in the following areas:
+Maintainer of ARM builds for ROS is http://answers.ros.org/users/1034/ahendrix/
 
-- Setting up Jetson Nano for AI and robotics applications
-- Integrating Robot Operating System (ROS) with Jetson Nano
-- Simulating robots in ISAAC and using Jetson Nano in Robotics
-- Implementing multi-object tracking and recognition with pre-trained models and DNNs
-- Exploring the world of Autonomous Mobile Robots (AMR)
-- Developing mapping and navigation algorithms for AMR
-- Implementing YOLO (You Only Look Once) and Gen AI for real-time object detection
-- Customizing and extending Metropolis SDK for robotics applications
-- Building an end-to-end AI and robotics application using Jetson devices, Metropolis SDK, and ROS
+There are two scripts:
 
-## Prerequisites
+<strong>installROS.sh</strong>
+<pre>
+Usage: ./installROS.sh  [[-p package] | [-h]]
+ -p | --package &lt;packagename&gt;  ROS package to install
+                               Multiple Usage allowed
+                               The first package should be a base package. One of the following:
+                                 ros-melodic-ros-base
+                                 ros-melodic-desktop
+                                 ros-melodic-desktop-full
+ </pre>
+ 
+Default is ros-melodic-ros-base if no packages are specified.
 
-Make sure you have the following:
+Example Usage:
 
-- NVIDIA Jetson Nano device
-- Laptop or computer with internet access
-- Basic knowledge of AI and programming concepts
+`$ ./installROS.sh -p ros-melodic-desktop -p ros-melodic-rgbd-launch`
 
-## Workshop Agenda
+This script installs a baseline ROS environment. There are several tasks:
 
-The workshop is structured as a one-day event, covering a variety of topics through a combination of lectures, hands-on exercises, and a final project. Here's an overview of the agenda:
+* Enable repositories universe, multiverse, and restricted
+* Adds the ROS sources list
+* Sets the needed keys
+* Loads specified ROS packages, defaults to ros-melodic-base-ros if none specified
+* Initializes rosdep
+* Sets up `ROS_MASTER_URI` and `ROS_IP` in the `~/.bashrc` file
 
-1. **Introduction to Jetson Devices and Metropolis SDK**
-   - Overview of NVIDIA Jetson family and Metropolis SDK.
-   - Introduction to edge computing and its significance.
+_**Note:** You will need to check your `~/.bashrc` file to make sure the ROS_MASTER_URI and ROS_IP are setup correctly for your environment. During configuration, a best guess is made which should be considered a placeholder._
 
-2. **Understanding the Mechanics of Deep Learning**
-   - Deep dive into the fundamentals of deep learning.
-   - Exploring neural networks, layers, and optimization techniques.
+You can edit this file to add the ROS packages for your application. 
 
-3. **Getting Started with Jetson Nano**
-   - Introduction to NVIDIA Jetson Nano and its capabilities.
-   - Understanding Jetson Architecture and Hardware
-   - Hands-on session on setting up and configuring Jetson Nano.
-   - Integrating Jetson with Cameras and Sensors
+**setupCatkinWorkspace.sh**
+Usage:
 
-4. **Installing ROS on Jetson Nano**
-   - Step-by-step guide to installing Robot Operating System (ROS) on Jetson Nano.
-   - Overview of ROS architecture and functionalities.
+`$ ./setupCatkinWorkspace.sh [_optionalWorkspaceName_]`
 
-5. **Robotics and ROS Integration**
-   - Exploring the intersection of robotics and ROS.
-   - Hands-on exercises on integrating Jetson Nano with ROS for robotic applications.
+where _optionalWorkspaceName_ is the name and path of the workspace to be used. The default workspace name is `~/catkin_ws`. 
+ 
+## Release Notes
 
-6. **Object Detection and Tracking using DNNs**
-    - Deep dive into object classification techniques.
-    - Practical exercises on implementing object recognition algorithms using pre-trained models and Metropolis SDK on Jetson devices.
-    - Optimizing Performance with TensorRT
-    
-8. **Introduction to Autonomous Mobile Robots (AMR)**
-    - Overview of Autonomous Mobile Robots (AMR) and their applications.
-    - Discussion on mapping, navigation, and control algorithms for AMR.
+### September 2021
+* v1.1
+* Tested on L4T 32.6.1 (JetPack 4.6)
+* Update ROS GPG Key
+* Setup ROS_IP more intelligently
+* Setup ROS_MASTER_URI and ROS_IP in installROS script instead of setupCatkinWorkspace
+* Script wrangling and cleanup
+* Thank you @hweizh for suggested ROS Key change!
 
-9. **Mapping and Navigation for AMR**
-    - Hands-on session on developing mapping and navigation algorithms for AMR using Jetson devices.
-    - Exploration of techniques such as SLAM (Simultaneous Localization and Mapping).
+### January 2020
+* v1.0
+* Tested on L4T 32.3.1 (JetPack 4.3)
 
-10. **YOLO and Gen AI for Robotics**
-    - Introduction to YOLO (You Only Look Once) algorithm for real-time object detection.
-    - Overview of Gen AI techniques and their applications in robotics.
-    - Practical exercises on implementing YOLO and Gen AI algorithms on Jetson devices.
+## License
+MIT License
 
-11. **Customizing and Extending Metropolis SDK for Robotics**
-    - Guide to extending Metropolis SDK for robotics applications.
-    - Hands-on session on developing custom AI algorithms for robotics using Jetson devices.
+Copyright (c) 2017-2021 JetsonHacks
 
-12. **Hands-on Project: Building an End-to-End Edge AI and Robotics Application**
-    - Participants will work on a guided project integrating AI and robotics using Jetson devices, Metropolis SDK, and ROS.
-    - Emphasis on real-world applications and challenges.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-13. **Q&A and Troubleshooting Session**
-    - Open floor for participants to ask questions and discuss any challenges faced during the workshop.
-    - Troubleshooting tips and resources for ongoing support.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-14. **Closing Remarks and Next Steps**
-    - Summary of key takeaways from the workshop.
-    - Resources for further learning, research, and community support.
-
-
-
-## Getting Started
-
-To get started with the workshop, follow the instructions outlined in the individual sections of this repository. Each section contains detailed information, code snippets, and resources to facilitate your learning journey.
-
-## Questions and Support
-
-If you have any questions or encounter issues during the workshop, feel free to reach out by creating an issue in this repository. We're here to help!
-
-## Acknowledgments
-
-Special thanks to NVIDIA for providing the Jetson devices and Metropolis SDK for this workshop.
-
-Happy learning!
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+ 
