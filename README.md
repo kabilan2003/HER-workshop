@@ -1,4 +1,4 @@
-"# HER-workshop" 
+# HER-workshop
 
 # Advancing AI and Robotics Workshop with Jetson Devices and Metropolis SDK
 
