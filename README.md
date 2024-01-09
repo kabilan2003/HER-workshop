@@ -90,7 +90,8 @@ The workshop is structured as a one-day event, covering a variety of topics thro
 
 ### Getting Started
 
-To get started with the workshop, follow the instructions outlined in the individual sections of this repository. Each section contains detailed information, code snippets, and resources to facilitate your learning journey.
+Simply click on the following link to join the community: [Slack Invite Link] 
+To get started with the workshop, follow the instructions outlined in the individual sections of this repository. Each section contains detailed information, code snippets, and resources to facilitate your learning.
 
 ### Questions and Support
 
