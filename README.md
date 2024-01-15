@@ -22,7 +22,7 @@ This workshop aims to provide participants with practical skills and knowledge i
 
 Make sure you have the following:
 
-- NVIDIA Jetson Nano device
+- Jetson Nano based systems 
 - Laptop or computer with internet access
 - Basic knowledge of AI and programming concepts
 
@@ -30,19 +30,29 @@ Make sure you have the following:
 
 The workshop is structured as a one-day event, covering a variety of topics through a combination of lectures, hands-on exercises, and a final project. Here's an overview of the agenda:
 
-1. **Introduction to Jetson Devices and Metropolis SDK**
-   - Overview of NVIDIA Jetson family and Metropolis SDK.
-   - Introduction to edge computing and its significance.
+1. **Introduction to AI**
+   - Impact of AI on future jobs.
+   - Introduction to AI Workflows (DL focused workflows).
+   - Introduction to AI Platforms (tools for training, deploying etc.)
+   - Introduction to edge computing and its significance. (focus: industrial use-cases)
 
 2. **Understanding the Mechanics of Deep Learning**
    - Deep dive into the fundamentals of deep learning.
    - Exploring neural networks, layers, and optimization techniques.
 
-3. **Getting Started with Jetson Nano**
+3. **Introduction to Jetson Devices and NVIDIA SDKs**
+   - Overview of NVIDIA Jetson family and NVIDIA SDKs.
+
+4. **Getting Started with Jetson Nano**
    - Introduction to NVIDIA Jetson Nano and its capabilities.
    - Understanding Jetson Architecture and Hardware
    - Hands-on session on setting up and configuring Jetson Nano.
    - Integrating Jetson with Cameras and Sensors
+
+6. **Accelerated Computer Vision using DNNs & Metropolis SDK**
+    - Deep dive into object classification techniques.
+    - Practical exercises on implementing object recognition algorithms using pre-trained models and Metropolis SDK on Jetson devices.
+    - Optimizing Performance with TensorRT
 
 4. **Installing ROS on Jetson Nano**
    - Step-by-step guide to installing Robot Operating System (ROS) on Jetson Nano.
@@ -51,11 +61,6 @@ The workshop is structured as a one-day event, covering a variety of topics thro
 5. **Robotics and ROS Integration**
    - Exploring the intersection of robotics and ROS.
    - Hands-on exercises on integrating Jetson Nano with ROS for robotic applications.
-
-6. **Object Detection and Tracking using DNNs**
-    - Deep dive into object classification techniques.
-    - Practical exercises on implementing object recognition algorithms using pre-trained models and Metropolis SDK on Jetson devices.
-    - Optimizing Performance with TensorRT
     
 8. **Introduction to Autonomous Mobile Robots (AMR)**
     - Overview of Autonomous Mobile Robots (AMR) and their applications.
@@ -90,7 +95,7 @@ The workshop is structured as a one-day event, covering a variety of topics thro
 
 ### Getting Started
 
-Simply click on the following link to join the community: [Slack Invite Link] 
+Simply click on the following link to join the community: [Slack Invite Link](https://join.slack.com/t/nvidiaindiaje-8dy8069/shared_invite/zt-2avn3fc00-mgK9u84Q8tR953VdNNacmg) 
 To get started with the workshop, follow the instructions outlined in the individual sections of this repository. Each section contains detailed information, code snippets, and resources to facilitate your learning.
 
 ### Questions and Support
