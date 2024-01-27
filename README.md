@@ -9,7 +9,7 @@ Welcome to the "Advancing AI and Robotics with Jetson Devices and Metropolis SDK
 This workshop aims to provide participants with practical skills and knowledge in the following areas:
 
 - Setting up Jetson Nano for AI and robotics applications
-- Integrating Robot Operating System (ROS) with Jetson Nano
+- Integrating Robot Operating System (ROS) with Jetson orin AGX
 - Simulating robots in ISAAC and using Jetson Nano in Robotics
 - Implementing multi-object tracking and recognition with pre-trained models and DNNs
 - Exploring the world of Autonomous Mobile Robots (AMR)
